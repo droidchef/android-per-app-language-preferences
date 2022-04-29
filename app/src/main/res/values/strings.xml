@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Language Selector</string>
+    <string name="greeting">Hello, World!</string>
 </resources>
