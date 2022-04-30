@@ -1,12 +1,13 @@
 package dev.droidchef.samples.languageselector
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.LocaleManager
 import android.os.Bundle
-import android.view.LayoutInflater
+import android.os.LocaleList
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
+import androidx.appcompat.app.AppCompatActivity
 import dev.droidchef.samples.languageselector.databinding.ActivityMainBinding
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
             object : AdapterView.OnItemSelectedListener {
                 override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                     println("Selected locale = ${localeList[p2]}")
+                    setAppLocale(Locale.forLanguageTag(localeList[p2]))
+
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
@@ -28,6 +31,11 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+    }
+
+    private fun setAppLocale(locale: Locale) {
+        val localeManager = getSystemService(LocaleManager::class.java)
+        localeManager.applicationLocales = LocaleList(locale)
     }
 
 }
