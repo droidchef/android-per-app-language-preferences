@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Language Selector</string>
+    <string name="app_name" translatable="false">Language Selector</string>
     <string name="greeting">Hello, World!</string>
     <string-array name="languages">
         <item>Hindi</item>
