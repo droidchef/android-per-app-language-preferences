@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">Language Selector</string>
+    <string name="greeting">Hello, World!</string>
+    <string-array name="languages">
+        <item>Hindi</item>
+        <item>Dutch</item>
+        <item>Japanese</item>
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Italian</item>
+        <item>French</item>
+    </string-array>
+</resources>
